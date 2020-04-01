@@ -2,7 +2,7 @@
 
 public class Program
 {
-    struct cancion
+    public struct cancion
     {
         public string titulo;
         public string artista;
@@ -11,14 +11,13 @@ public class Program
         
     }
     public int cantidadFicheros = 0;
-
-
-
-    
+  
 
     static byte opcion = 0;
     static int capacidad = 1000;
     static cancion[] canciones = new cancion[capacidad];
+
+    public cancion[] Canciones { get { return canciones; } set { canciones=value;} }
 
 
 
