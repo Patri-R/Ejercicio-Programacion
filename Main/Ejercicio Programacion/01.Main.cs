@@ -27,25 +27,31 @@ public class Program
     {
         do
         {
+            Menu menu = new Menu();           
+            AnyadirDato nuevoDato = new AnyadirDato();
             Mostrar mostrarCompleto = new Mostrar();
-            
+            BusquedaTamano busquedaTamano = new BusquedaTamano();
+            busquedaparcial busquedaparcial = new busquedaparcial();
+
+
             try
             {
-                //Mostrar menú
+                menu.MostrarMenu();
                 opcion = Convert.ToByte(Console.ReadLine());
                 switch (opcion)
                 {
                     case 1:
-                        //Añadir dato
+                        nuevoDato.RellenarDatos();
                         break;
                     case 2:
-                        mostrarCompleto.MostrarDatos(0, Convert.ToUInt16(cantidadFicheros));
+                        mostrarCompleto.MostrarDatos();
+                        
                         break;
                     case 3:
-                        //buscar por tamaño
+                        busquedaTamano.BuscarTamano();
                         break;
                     case 4:
-                        //buscar por letra
+                        busquedaparcial.busqueda();
                         break;
                     case 5:
                         Console.WriteLine("Fin de programa");
@@ -54,7 +60,7 @@ public class Program
                         Console.WriteLine("Opción no válida");
                         break;
                 }
-                Console.WriteLine();
+                Console.ReadLine();
             }
             catch (FormatException)
             {
@@ -64,6 +70,7 @@ public class Program
             {
                 Console.WriteLine("Número demasiado grande");
             }
+            Console.Clear();
         }
         while (opcion != 5);
     }
