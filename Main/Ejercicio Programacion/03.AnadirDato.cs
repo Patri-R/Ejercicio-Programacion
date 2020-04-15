@@ -9,16 +9,17 @@ namespace Ejercicio_Programacion
         
         public void saludo()
         {
+            Program program = new Program ();
             cantidadFicheros ++;
             Console.WriteLine("A continuación te mostraré los datos a rellenar" +
                 "\n-Título:");
-            program.canciones[cantidadFicheros].titulo = Console.ReadLine();
+            program.Canciones[CantidadFicheros].titulo = Console.ReadLine();
             Console.WriteLine("-Artista:");
-            program.canciones[cantidadFicheros].artista = Console.ReadLine();
+            program.Canciones[CantidadFicheros].artista = Console.ReadLine();
             Console.WriteLine("-Duración:");
-            program.canciones[cantidadFicheros].duracion = Console.ReadLine();
+            program.Canciones[CantidadFicheros].duracion = Console.ReadLine();
             Console.WriteLine("-Tamaño (Kb):");
-            program.canciones[cantidadFicheros].tamañoKB = Console.ReadLine();
+            program.Canciones[CantidadFicheros].tamañoKB = Console.ReadLine();
         }
 
     }
