@@ -20,6 +20,7 @@ namespace Ejercicio_Programacion
             program.Canciones[program.CantidadFicheros].duracion = Console.ReadLine();
             Console.WriteLine("-Tamaño (Kb):");
             program.Canciones[program.CantidadFicheros].tamañoKB = Console.ReadLine();
+
         }
 
     }
