@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿//Javi
 
-namespace Ejercicio_Programacion
+using System;
+public class Menu
 {
-    class Menu
+    public void MostrarMenu()
     {
         int opcion = 0;
 
