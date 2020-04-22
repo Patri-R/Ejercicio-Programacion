@@ -3,20 +3,27 @@ public class BusquedaTamano
 {
     public void BuscarTamano()
     {
-        Program program = new Program();
         int aciertos = 0;
-        Console.Write("Introduce el tamaño a partir del cual quieres buscar (en Kb por favor) : ");
-        short buscar = Convert.ToInt16( Console.ReadLine());
-        for (int i = 0; i < program.CantidadFicheros; i++)
+
+        public void BuscarPorTamano()
         {
-            if (program.Canciones[i].tamanoKB >= buscar)
+            program program = new program();
+
+            Console.WriteLine("Bienvenido a la busqueda del tamayo, introduzca por favor a partir de que tamanyo quieres buscar (en kb)");
+            Console.WriteLine();
+            short busqueda = Convert.ToInt16(Console.ReadLine());
+
+            for (int i = 0; i < program.NumeroDeFicheros; i++)
             {
-                aciertos++;
-                Console.WriteLine("Coincidencia {0}:", aciertos);
-                Console.WriteLine("Título: {0}", program.Canciones[i].titulo);
-                Console.WriteLine("Autor: {0}", program.Canciones[i].titulo);
-                Console.WriteLine("Duración: {0}", program.Canciones[i].duracion);
-                Console.WriteLine("TamañoKB: {0}\n", program.Canciones[i].tamanoKB);
+                if (program.canciones[i].tamanyo >= busqueda)
+                {
+                    aciertos++;
+                    Console.WriteLine();
+                    Console.WriteLine("Titulo {0}:");
+                    Console.WriteLine("Autor {1}:");
+                    Console.WriteLine("Duracion {2}:");
+                    Console.WriteLine("Tamanyo {3}:");                  
+                }
             }
         }
     }
